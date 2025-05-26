@@ -1,9 +1,13 @@
- /* Reset and Basic Styles */
+/* Reset and Basic Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+}
+
+html {
+    font-size: clamp(14px, 1.5vw, 18px); /* Scalable base font size */
 }
 
 body {
@@ -12,8 +16,8 @@ body {
 }
 
 .resume-container {
-    max-width: 1000px;
-    margin: 20px auto;
+    width: 100%;
+    margin: 0 auto;
     background-color: #333;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
@@ -32,179 +36,147 @@ body {
 .profile-info {
     background-color: #ffcc00;
     color: #333;
-    padding: 40px;
+    padding: 3vw;
+    height: auto;
+    width: 100%;
 }
 
 .profile-info h1 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 1.5rem;
 }
 
 .profile-info h2 {
     display: inline-block;
+    font-size: clamp(1rem, 2.2vw, 1.5rem);
     background-color: #333;
     color: #ffcc00;
-    padding: 5px 10px;
-    font-size: 1rem;
-    margin-bottom: 20px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .profile-info p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-bottom: 20px;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
 .profile-image {
-    display: block; 
+    width: 100%;
+    display: block;
 }
 
 .profile-image img {
     width: 100%;
-    height: 340px; 
+    height: auto;
+    max-height: 520px;
     object-fit: cover;
-    display: block;
 }
 
 /* Stats Section */
 .stats {
     background-color: #222;
-    display: flex;               
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 15px 0;
+    padding: 2vw 0;
+    gap: 1rem;
 }
 
 .stat-item {
-    align-items: center; 
-    gap: 12px;            
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1 1 200px;
 }
 
 .stat-icon {
     color: #ffcc00;
-    font-size: 2rem;      
-}
-
-.stat-text {
-    display: flex;
-    flex-direction: column;  
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
 .stat-value {
     color: #ffcc00;
     font-weight: bold;
-    font-size: 1.3rem;
-    line-height: 1.2;
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .stat-label {
     color: #999;
-    font-size: 0.95rem;
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
     text-transform: uppercase;
-    margin-top: 3px;
 }
-
 
 /* Main Content */
 .main-content {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 2vw;
 }
 
-/* Left Column */
-.left-column {
-    padding-right: 0;
-    margin-bottom: 20px;
-}
-
-/* Right Column */
+.left-column,
 .right-column {
-    border-left: none;
-    padding-left: 0;
+    width: 100%;
 }
 
 /* Section Styling */
 .section {
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
 }
 
 .section-title {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    margin-bottom: 1.25rem;
     color: #fff;
     text-transform: uppercase;
-    border-bottom: none;
-    padding-bottom: 10px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.75rem;
 }
 
- /* Social Media Section */
-.social-media {
-    margin-bottom: 10px;
-}
-
-.social-item {
+/* Social, Contact, Hobbies */
+.social-item, .contact-item, .hobby-item, .interest-item {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
-.social-icon {
+.social-icon, .contact-icon, .hobby-icon, .interest-icon {
     background-color: #ffcc00;
     color: #333;
-    width: 25px;
-    height: 25px;
+    width: 2.2rem;
+    height: 2.2rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 10px;
-    font-size: 0.8rem;
+    margin-right: 0.75rem;
+    font-size: clamp(1rem, 2vw, 1.3rem);
     font-weight: bold;
 }
 
-.social-text {
-    font-size: 0.9rem;
+.social-text, .hobby-name, .interest-name {
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
     color: #ccc;
-}
-
-/* Contact Section */
-.contact-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.contact-icon {
-    background-color: #ffcc00;
-    color: #333;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-    font-size: 0.8rem;
 }
 
 /* Skills Section */
 .skills {
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 
 .skill-item {
-     margin-bottom: 15px;
+    margin-bottom: 1.25rem;
 }
 
 .skill-name {
-    font-size: 0.9rem;
-    margin-bottom: 5px;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    margin-bottom: 0.5rem;
     color: #ccc;
 }
 
 .skill-bar {
-    height: 8px;
+    height: 0.6rem;
     background-color: #444;
     border-radius: 4px;
     overflow: hidden;
@@ -215,97 +187,33 @@ body {
     background-color: #ffcc00;
 }
 
-/* Hobbies Section */
-.hobbies {
-    display: flex;
-    flex-direction: column; 
-    gap: 10px; 
-    flex-wrap: wrap;
-}
-
-.hobby-item {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-    margin-bottom: 10px;
-}
-
-.hobby-icon {
-    background-color: #ffcc00;
-    color: #333;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 8px;
-    font-size: 0.8rem;
-}
-
-.hobby-name {
-    font-size: 0.9rem;
-    color: #ccc;
-}
-
-/* Education and Experience Sections */
+/* Education and Experience */
 .timeline-item {
-    margin-bottom: 25px;
+    margin-bottom: 1.5rem;
 }
 
 .timeline-date {
-    font-size: 0.85rem;
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
     color: #ffcc00;
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
 }
 
 .timeline-title {
-    font-size: 1rem;
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
     color: #fff;
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
 }
 
 .timeline-subtitle {
-    font-size: 0.85rem;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
     color: #ccc;
-    margin-bottom: 10px;
+    margin-bottom: 0.75rem;
 }
 
 .timeline-description {
-    font-size: 0.8rem;
+    font-size: clamp(0.85rem, 1.2vw, 1rem);
     color: #aaa;
-    line-height: 1.5;
-}
-
-/* Interests Section */
-.interests {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.interest-item {
-    text-align: center;
-    margin-right: 20px;
-    margin-bottom: 15px;
-}
-
-.interest-icon {
-    background-color: #ffcc00;
-    color: #333;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 8px;
-    font-size: 0.8rem;
-}
-
-.interest-name {
-    font-size: 0.8rem;
-    color: #ccc;
+    line-height: 1.6;
 }
 
 /* Languages Section */
@@ -315,81 +223,126 @@ body {
 }
 
 .language-item {
-    margin-right: 20px;
-    margin-bottom: 15px;
+    margin-right: 1.25rem;
+    margin-bottom: 1rem;
 }
 
 .language-name {
-    font-size: 0.9rem;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
     color: #fff;
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
     text-align: center;
 }
 
 .language-level {
     display: flex;
+    justify-content: center;
 }
 
 .level-dot {
-    width: 10px;
-    height: 10px;
+    width: 0.7rem;
+    height: 0.7rem;
     background-color: #444;
     border-radius: 50%;
-    margin-right: 3px;
+    margin-right: 0.3rem;
 }
 
 .level-dot.active {
     background-color: #ffcc00;
 }
 
-/* Media Queries for Responsiveness */
-@media screen and (min-width: 768px) {
+
+/* Tablet view (768px to 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     .profile-section {
         flex-direction: row;
-        align-items: center;
+        align-items: stretch;
+         max-height: none;
     }
-            
+
+    .profile-info {
+        width: 60%;
+        padding: 2.5vw;
+    }
+
+    .profile-image {
+        width: 40%;
+    }
+
+    .profile-image img {
+        height: 100%;
+        max-height: none;
+        object-fit: cover;
+    }
+
+    .main-content {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+/* Desktop view (above 1024px) */
+@media screen and (min-width: 1025px) {
+    .resume-container {
+        margin: 3rem auto;
+    }
+
+    .profile-section {
+        flex-direction: row;
+    }
+
     .profile-info {
         width: 65%;
+        padding: 3vw;
     }
-            
+
     .profile-image {
-        display: block;
         width: 35%;
     }
-            
+
+    .profile-image img {
+        height: 100%;
+        object-fit: cover;
+    }
+
     .main-content {
         flex-direction: row;
     }
-            
+
     .left-column {
-         width: 35%;
-        padding-right: 20px;
-        margin-bottom: 0;
+        flex: 1;
+        padding-right: 2rem;
     }
-            
+
     .right-column {
-        width: 65%;
+        flex: 2;
+        padding-left: 2rem;
         border-left: 1px solid #444;
-        padding-left: 20px;
-    }
-            
-    .section-title {
-        border-bottom: 1px solid #444;
-    }
-
-}
-
-@media screen and (min-width: 992px) {
-    .resume-container {
-     margin: 40px auto;
-    }
-            
-    .profile-info h1 {
-        font-size: 3rem;
-    }
-            
-    .profile-info h2 {
-        font-size: 1.2rem;
     }
 }
+
+/* Fix for image size between 1024px and 1439px */
+@media screen and (min-width: 1024px) and (max-width: 1500px) {
+    .profile-section {
+        display: flex;
+        align-items: stretch; /* ensures both columns stretch equally */
+    }
+
+    .profile-image {
+        width: 35%;
+        height: auto;
+    }
+
+    .profile-image img {
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .profile-info {
+        width: 65%;
+    }
+}
+
