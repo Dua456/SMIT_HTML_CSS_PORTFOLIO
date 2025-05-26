@@ -322,7 +322,7 @@ body {
 }
 
 /* Fix for image size between 1024px and 1439px */
-@media screen and (min-width: 1024px) and (max-width: 1500px) {
+@media screen and (min-width: 1024px) and (max-width: 2748px) {
     .profile-section {
         display: flex;
         align-items: stretch; /* ensures both columns stretch equally */
@@ -336,13 +336,14 @@ body {
     .profile-image img {
         width: 100%;
         height: 100%;
-        max-height: 100%;
+        min-height: 100%;
         object-fit: cover;
         display: block;
     }
 
     .profile-info {
         width: 66%;
+        height: auto;
     }
 }
 
